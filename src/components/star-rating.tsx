@@ -8,8 +8,6 @@ type StarRatingProps = {
 export const StarRating = ({ legend }: StarRatingProps) => {
   const [rating, setRating] = useState<string>('0')
 
-  console.log('rating', rating)
-
   return (
     <fieldset>
       <legend>{legend}</legend>
