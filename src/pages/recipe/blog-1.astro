@@ -19,7 +19,12 @@ import { StarRating } from '@components/star-rating'
   <main aria-labelledby='title' class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
     <div class='grid gap-4'>
       <h1 id='title' class='text-4xl font-bold'>Delicious Chocolate Chip Cookies</h1>
-      <Image src={cookie} alt='Cookie' class='rounded-lg shadow-lg' loading='eager' />
+      <Image
+        src={cookie}
+        alt=`Freshly baked chocolate chip cookies cooling on a wire rack. In the foreground, there's a close-up of a cookie that has been broken in half, revealing its soft and chewy interior filled with melted chocolate chips. The cookies have a golden-brown color and are studded with dark chocolate chips throughout. Several other whole cookies can be seen in the background, all resting on the silver wire cooling rack. The cookies appear to be homemade and look deliciously tempting.`
+        class='rounded-lg shadow-lg'
+        loading='eager'
+      />
       <StarRating legend='Rate this recipe' client:load />
     </div>
     <section aria-labelledby='ingredients' class='grid gap-4'>
