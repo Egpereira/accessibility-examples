@@ -9,17 +9,22 @@ import { StarRating } from '@components/star-rating'
 
 <Layout title='Recipe Blog Example 1'>
   <header class='flex min-h-16 items-center border-b px-5'>
-    <a href='/' class='text-2xl font-bold'>Recipe Blog</a>
+    <a
+      href='/'
+      class='text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
+    >
+      Recipe Blog
+    </a>
   </header>
-  <main class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
+  <main aria-labelledby='title' class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
     <div class='grid gap-4'>
-      <h1 class='text-4xl font-bold'>Delicious Chocolate Chip Cookies</h1>
-      <Image src={cookie} alt='Cookie' class='rounded-lg shadow-lg' />
+      <h1 id='title' class='text-4xl font-bold'>Delicious Chocolate Chip Cookies</h1>
+      <Image src={cookie} alt='Cookie' class='rounded-lg shadow-lg' loading='eager' />
       <StarRating legend='Rate this recipe' client:load />
     </div>
-    <section class='grid gap-4'>
-      <h2 class='text-3xl font-bold'>Ingredients</h2>
-      <ul class='grid list-inside list-disc gap-2'>
+    <section aria-labelledby='ingredients' class='grid gap-4'>
+      <h2 id='ingredients' class='text-3xl font-bold'>Ingredients</h2>
+      <ul aria-labelledby='ingredients' class='grid list-inside list-disc gap-2'>
         <li>2 1/4 cups (280g) all-purpose flour</li>
         <li>1 tsp baking soda</li>
         <li>1 tsp salt</li>
@@ -31,9 +36,9 @@ import { StarRating } from '@components/star-rating'
         <li>2 cups (340g) semi-sweet chocolate chips</li>
       </ul>
     </section>
-    <section class='grid gap-4'>
-      <h2 class='text-3xl font-bold'>Instructions</h2>
-      <ol class='grid list-inside list-decimal gap-2'>
+    <section aria-labelledby='instructions' class='grid gap-4'>
+      <h2 id='instructions' class='text-3xl font-bold'>Instructions</h2>
+      <ol aria-labelledby='instructions' class='grid list-inside list-decimal gap-2'>
         <li>Preheat the oven to 375°F (190°C). Line baking sheets with parchment paper.</li>
         <li>In a bowl, whisk together flour, baking soda, and salt.</li>
         <li>
@@ -49,7 +54,4 @@ import { StarRating } from '@components/star-rating'
       </ol>
     </section>
   </main>
-  <!-- <footer class='px-5 py-8'>
-    <h2>Links</h2>
-  </footer> -->
 </Layout>

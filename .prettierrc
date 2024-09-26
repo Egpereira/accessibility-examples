@@ -5,6 +5,7 @@
   "jsxSingleQuote": true,
   "bracketSpacing": true,
   "trailingComma": "none",
+  "htmlWhitespaceSensitivity": "ignore",
   "plugins": [
     "prettier-plugin-astro",
     "prettier-plugin-tailwindcss"

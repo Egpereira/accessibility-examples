@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets'
+
+import Layout from '@layouts/Layout.astro'
+import cookie from '@assets/cookie.webp'
+
+import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
+---
+
+<Layout title='Recipe Blog Example 1'>
+  <div class='flex min-h-16 items-center border-b px-5'>
+    <div
+      data-href='/'
+      class='clickable-div cursor-pointer text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
+    >
+      Recipe Blog*
+    </div>
+  </div>
+  <div class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
+    <div class='grid gap-4'>
+      <span class='text-4xl font-bold'>Delicious Chocolate Chip Cookies</span>
+      <Image src={cookie} alt='Cookie' class='rounded-lg shadow-lg' loading='eager' />
+      <InaccessibleStarRating legend='Rate this recipe' client:load />
+    </div>
+    <div class='grid gap-4'>
+      <span class='text-3xl font-bold'>Ingredients</span>
+      <div class='grid gap-2 text-pretty'>
+        <span class='list-item list-inside'>2 1/4 cups (280g) all-purpose flour</span>
+        <span class='list-item list-inside'>1 tsp baking soda</span>
+        <span class='list-item list-inside'>1 tsp salt</span>
+        <span class='list-item list-inside'>1 cup (230g) unsalted butter, softened</span>
+        <span class='list-item list-inside'>3/4 cup (150g) granulated sugar</span>
+        <span class='list-item list-inside'>3/4 cup (165g) packed brown sugar</span>
+        <span class='list-item list-inside'>2 large eggs</span>
+        <span class='list-item list-inside'>2 tsp vanilla extract</span>
+        <span class='list-item list-inside'>2 cups (340g) semi-sweet chocolate chips</span>
+      </div>
+    </div>
+    <div class='grid gap-4'>
+      <span class='text-3xl font-bold'>Instructions</span>
+      <div class='grid gap-2 text-pretty'>
+        <span class='list-item list-inside list-decimal'>
+          Preheat the oven to 375°F (190°C). Line baking sheets with parchment paper.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          In a bowl, whisk together flour, baking soda, and salt.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          In a large bowl, cream together butter, granulated sugar, and brown sugar until light and
+          fluffy.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Beat in eggs one at a time, then stir in vanilla.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Gradually mix in the dry ingredients until just blended.
+        </span>
+        <span class='list-item list-inside list-decimal'>Stir in chocolate chips.</span>
+        <span class='list-item list-inside list-decimal'>
+          Drop rounded tablespoons of dough onto the prepared baking sheets.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Bake for 9 to 11 minutes or until golden brown.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Let cool on baking sheets for 5 minutes before transferring to a wire rack.
+        </span>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const clickableDiv = document.querySelector('.clickable-div')
+    if (clickableDiv) {
+      clickableDiv.addEventListener('click', () => {
+        const href = clickableDiv.getAttribute('data-href')
+        if (href) {
+          window.location.href = href
+        }
+      })
+    }
+  })
+</script>
+
+<style>
+  /* .bullet-list {
+    & span:before {
+      content: '\2022';
+      margin-right: 1em;
+    }
+  } */
+</style>

@@ -3,50 +3,29 @@ import { StarIcon } from './star-icon'
 
 type StarRatingProps = {
   legend: string
+  range?: number
 }
 
-export const StarRating = ({ legend }: StarRatingProps) => {
+export const StarRating = ({ legend, range = 5 }: StarRatingProps) => {
   const [rating, setRating] = useState<string>('0')
 
   return (
     <fieldset>
       <legend>{legend}</legend>
-      <div className='flex [&>.item:has(~.item:hover)]:scale-110 [&>.item:hover]:scale-110'>
-        <StarRadioButton
-          value='1'
-          id='star-1'
-          checked={rating === '1'}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRating(e.target.value)}
-          filled={+rating >= 1}
-        />
-        <StarRadioButton
-          value='2'
-          id='star-2'
-          checked={rating === '2'}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRating(e.target.value)}
-          filled={+rating >= 2}
-        />
-        <StarRadioButton
-          value='3'
-          id='star-3'
-          checked={rating === '3'}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRating(e.target.value)}
-          filled={+rating >= 3}
-        />
-        <StarRadioButton
-          value='4'
-          id='star-4'
-          checked={rating === '4'}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRating(e.target.value)}
-          filled={+rating >= 4}
-        />
-        <StarRadioButton
-          value='5'
-          id='star-5'
-          checked={rating === '5'}
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRating(e.target.value)}
-          filled={+rating >= 5}
-        />
+      <div className='flex [&>.item:has(~.item:hover)]:scale-125 [&>.item:has(~.item:hover)]:text-indigo-700 [&>.item:has(~.item:hover)]:duration-200 dark:[&>.item:has(~.item:hover)]:text-indigo-500 [&>.item:hover]:scale-125 [&>.item:hover]:text-indigo-700 [&>.item:hover]:duration-200 dark:[&>.item:hover]:text-indigo-500'>
+        {Array.from({ length: range }, (_, index) => {
+          const starValue = (index + 1).toString()
+          return (
+            <StarRadioButton
+              key={starValue}
+              value={starValue}
+              id={`star-${starValue}`}
+              checked={rating === starValue}
+              onChange={(e: React.ChangeEvent<HTMLInputElement>) => setRating(e.target.value)}
+              filled={+rating >= +starValue}
+            />
+          )
+        })}
       </div>
     </fieldset>
   )
@@ -68,7 +47,7 @@ const StarRadioButton = ({
   filled = false
 }: StarRadioButtonProps) => {
   return (
-    <div className='item text-3xl text-orange-600 duration-500 ease-in-out hover:duration-200'>
+    <div className='item text-3xl text-indigo-600 ring-black duration-500 ease-in-out dark:text-indigo-400 dark:ring-white [&:has(:focus-visible)]:ring'>
       <label htmlFor={id} className='flex h-11 w-11 cursor-pointer items-center justify-center'>
         <span className='sr-only'>
           {value}
