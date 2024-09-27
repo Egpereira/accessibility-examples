@@ -1,0 +1,251 @@
+---
+import Layout from '@layouts/Layout.astro'
+---
+
+<Layout title='Links'>
+  <main class='py-16 text-xl'>
+    <div class='mx-auto grid w-11/12 max-w-4xl gap-10'>
+      <h1 class='text-6xl font-bold text-indigo-800 dark:text-indigo-300'>Links</h1>
+      <p class='text-2xl'>
+        Links are an important part of any website. They allow users to navigate to other pages or
+        resources. The following examples demonstrate the difference from a properly built link and
+        non-accessible alternatives and how they affect the user experience.
+      </p>
+      <section
+        aria-labelledby='click'
+        class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
+      >
+        <h2 id='click' class='text-3xl font-bold'>Span with on click event</h2>
+        <details>
+          <summary
+            class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
+          >
+            Behavior
+          </summary>
+          <div class='px-4'>
+            <ul class='list-inside list-disc'>
+              <li>Needs JavaScript to work</li>
+              <li>Clickable with a mouse, finger or pointer device</li>
+            </ul>
+          </div>
+        </details>
+        <div>
+          Example:
+          <span
+            data-href='/'
+            class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 hover:decoration-indigo-800 hover:decoration-4 dark:decoration-indigo-400 dark:hover:decoration-indigo-200'
+          >
+            Home Page
+          </span>
+        </div>
+      </section>
+      <section
+        aria-labelledby='click-index'
+        class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
+      >
+        <h2 id='click-index' class='text-3xl font-bold'>Span with on click event and tab index</h2>
+        <details>
+          <summary
+            class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
+          >
+            Behavior
+          </summary>
+          <div class='px-4'>
+            <ul class='list-inside list-disc'>
+              <li>Needs JavaScript to work</li>
+              <li>Clickable with a mouse, finger or pointer device</li>
+              <li>Has a visible focus indicator</li>
+            </ul>
+          </div>
+        </details>
+        <div>
+          Example:
+          <span
+            tabindex='0'
+            data-href='/'
+            class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
+          >
+            Home Page
+          </span>
+        </div>
+      </section>
+      <section
+        aria-labelledby='click-index-keyboard'
+        class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
+      >
+        <h2 id='click-index-keyboard' class='text-3xl font-bold'>
+          Span with on click event, tab index and keyboard click handler
+        </h2>
+        <details>
+          <summary
+            class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
+          >
+            Behavior
+          </summary>
+          <div class='px-4'>
+            <ul class='list-inside list-disc'>
+              <li>Needs JavaScript to work</li>
+              <li>Clickable with a mouse, finger or pointer device</li>
+              <li>Has a visible focus indicator</li>
+              <li>
+                Can be activated using the <kbd>Enter</kbd> key, but requires a manual keyboard handler
+              </li>
+            </ul>
+          </div>
+        </details>
+        <div>
+          Example:
+          <span
+            tabindex='0'
+            data-href='/'
+            data-enable-keyboard-handler='true'
+            class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
+          >
+            Home Page
+          </span>
+        </div>
+      </section>
+      <section
+        aria-labelledby='click-index-keyboard-role'
+        class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
+      >
+        <h2 id='click-index-keyboard-role' class='text-3xl font-bold'>
+          Span with on click event, tab index, keyboard click handler and "link" role
+        </h2>
+        <details>
+          <summary
+            class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
+          >
+            Behavior
+          </summary>
+          <div class='px-4'>
+            <ul class='list-inside list-disc'>
+              <li>Needs JavaScript to work</li>
+              <li>Clickable with a mouse, finger or pointer device</li>
+              <li>Has a visible focus indicator</li>
+              <li>
+                Can be activated using the <kbd>Enter</kbd> key, but requires a manual keyboard handler
+              </li>
+              <li>Is identified as a link by screen readers</li>
+            </ul>
+          </div>
+        </details>
+        <div>
+          Example:
+          <span
+            role='link'
+            tabindex='0'
+            data-href='/'
+            data-enable-keyboard-handler='true'
+            class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
+          >
+            Home Page
+          </span>
+        </div>
+      </section>
+      <section
+        aria-labelledby='button-index'
+        class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
+      >
+        <h2 id='button-index' class='text-3xl font-bold'>Button with "link" role</h2>
+        <details>
+          <summary
+            class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
+          >
+            Behavior
+          </summary>
+          <div class='px-4'>
+            <ul class='list-inside list-disc'>
+              <li>Needs JavaScript to work</li>
+              <li>Clickable with a mouse, finger or pointer device</li>
+              <li>Has a visible focus indicator by default</li>
+              <li>
+                Can be activated using the <kbd>Enter</kbd> or <kbd>Space</kbd> (not default for links)
+                keys without a manual keyboard handler
+              </li>
+              <li>Is identified as a link by screen readers</li>
+            </ul>
+          </div>
+        </details>
+        <div>
+          Example:
+          <button
+            role='link'
+            data-href='/'
+            class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
+          >
+            Home Page
+          </button>
+        </div>
+      </section>
+      <section
+        aria-labelledby='proper-link'
+        class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
+      >
+        <h2 id='proper-link' class='text-3xl font-bold'>Proper link</h2>
+        <details>
+          <summary
+            class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
+          >
+            Behavior
+          </summary>
+          <div class='px-4'>
+            <ul class='list-inside list-disc'>
+              <li>Does not need JavaScript to work</li>
+              <li>Clickable with a mouse, finger or pointer device</li>
+              <li>Has a visible focus indicator by default</li>
+              <li>
+                Can be activated using the <kbd>Enter</kbd> key without the need for a manual keyboard
+                handler
+              </li>
+              <li>Is identified as a link by screen readers</li>
+              <li>Enables certain browsers to display the target URL</li>
+              <li>
+                Enables the contextual menu on right click with features like opening in a new
+                window or tab
+              </li>
+            </ul>
+          </div>
+        </details>
+        <div>
+          Example:
+          <a
+            href='/'
+            class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
+          >
+            Home Page
+          </a>
+        </div>
+      </section>
+    </div>
+  </main>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const fakeLinks = document.querySelectorAll<HTMLElement>('.fake-link')
+    if (fakeLinks.length) {
+      fakeLinks.forEach((link) => {
+        link.addEventListener('click', () => {
+          const href = link.getAttribute('data-href')
+          if (href) {
+            window.location.href = href
+          }
+        })
+
+        const enableKeyboard = link.getAttribute('data-enable-keyboard-handler')
+        if (enableKeyboard === 'true') {
+          link.addEventListener('keydown', (event: KeyboardEvent) => {
+            if (event.key === 'Enter') {
+              event.preventDefault()
+              const href = link.getAttribute('data-href')
+              if (href) {
+                window.location.href = href
+              }
+            }
+          })
+        }
+      })
+    }
+  })
+</script>

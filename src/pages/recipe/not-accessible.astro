@@ -10,8 +10,9 @@ import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
 <Layout title='Recipe Blog Example (Not Accessible)'>
   <div class='flex min-h-16 items-center border-b px-5'>
     <div
+      id='clickable-div'
       data-href='/'
-      class='clickable-div cursor-pointer text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
+      class='cursor-pointer text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
     >
       Recipe Blog*
     </div>
@@ -72,7 +73,7 @@ import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    const clickableDiv = document.querySelector('.clickable-div')
+    const clickableDiv = document.getElementById('clickable-div')
     if (clickableDiv) {
       clickableDiv.addEventListener('click', () => {
         const href = clickableDiv.getAttribute('data-href')
