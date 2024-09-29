@@ -3,14 +3,15 @@ import '../styles/reset.css'
 
 type Props = {
   title: string
+  lang?: string
   class?: string
 }
 
-const { title, class: className } = Astro.props
+const { title, lang = 'en', class: className } = Astro.props
 ---
 
 <!doctype html>
-<html lang='en'>
+<html lang={lang}>
   <head>
     <meta charset='UTF-8' />
     <meta
