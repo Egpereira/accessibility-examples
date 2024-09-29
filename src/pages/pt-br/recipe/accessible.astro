@@ -1,0 +1,64 @@
+---
+import { Image } from 'astro:assets'
+
+import Layout from '@layouts/Layout.astro'
+import cookie from '@assets/cookie.webp'
+
+import { StarRating } from '@components/star-rating'
+import LanguageSelector from '@components/language-selector.astro'
+---
+
+<Layout title='Exemplo de blog de receitas (acessível)'>
+  <header class='flex min-h-16 items-center border-b px-5'>
+    <a
+      href='/pt-br'
+      class='text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
+    >
+      Blog de Receitas
+    </a>
+    <LanguageSelector />
+  </header>
+  <main aria-labelledby='title' class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
+    <div class='grid gap-4'>
+      <h1 id='title' class='text-4xl font-bold'>Deliciosos Cookies com Gotas de Chocolate</h1>
+      <Image
+        src={cookie}
+        alt=`Cookies de gotas de chocolate recém-assados esfriando em uma grade. Em primeiro plano, há um close-up de um cookie que foi partido ao meio, revelando seu interior macio, cheio de gotas de chocolate derretidas. Os cookies têm uma cor marrom dourada e estão repletos de gotas de chocolate escuro por toda parte. Vários outros cookies inteiros podem ser vistos ao fundo, todos descansando na grade de resfriamento prateada. Os cookies parecem ser caseiros e têm uma aparência deliciosamente tentadora.`
+        class='rounded-lg shadow-lg'
+        loading='eager'
+      />
+      <StarRating legend='Avalie esta receita' client:load />
+    </div>
+    <section aria-labelledby='ingredients' class='grid gap-4'>
+      <h2 id='ingredients' class='text-3xl font-bold'>Ingredientes</h2>
+      <ul aria-labelledby='ingredients' class='grid list-inside list-disc gap-2'>
+        <li>2 1/4 xícaras (280g) de farinha de trigo</li>
+        <li>1 colher de chá de bicarbonato de sódio</li>
+        <li>1 colher de chá de sal</li>
+        <li>1 xícara (230g) de manteiga sem sal, amolecida</li>
+        <li>3/4 xícara (150g) de açúcar granulado</li>
+        <li>3/4 xícara (165g) de açúcar mascavo</li>
+        <li>2 ovos grandes</li>
+        <li>2 colheres de chá de extrato de baunilha</li>
+        <li>2 xícaras (340g) de gotas de chocolate meio amargo</li>
+      </ul>
+    </section>
+    <section aria-labelledby='instructions' class='grid gap-4'>
+      <h2 id='instructions' class='text-3xl font-bold'>Instruções</h2>
+      <ol aria-labelledby='instructions' class='grid list-inside list-decimal gap-2'>
+        <li>Pré-aqueça o forno a 190°C. Forre as assadeiras com papel manteiga.</li>
+        <li>Em uma tigela, misture a farinha, o bicarbonato e o sal.</li>
+        <li>
+          Em uma tigela grande, bata a manteiga, o açúcar granulado e o açúcar mascavo até ficar
+          leve e fofo.
+        </li>
+        <li>Adicione os ovos, um de cada vez, batendo bem, depois misture a baunilha.</li>
+        <li>Gradualmente, incorpore os ingredientes secos até que estejam bem misturados.</li>
+        <li>Adicione as gotas de chocolate e misture.</li>
+        <li>Coloque colheradas arredondadas da massa nas assadeiras preparadas.</li>
+        <li>Asse por 9 a 11 minutos ou até dourar.</li>
+        <li>Deixe esfriar nas assadeiras por 5 minutos antes de transferir para uma grade.</li>
+      </ol>
+    </section>
+  </main>
+</Layout>

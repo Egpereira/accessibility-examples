@@ -1,0 +1,92 @@
+---
+import { Image } from 'astro:assets'
+
+import Layout from '@layouts/Layout.astro'
+import cookie from '@assets/cookie.webp'
+
+import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
+import LanguageSelector from '@components/language-selector.astro'
+---
+
+<Layout title='Exemplo de blog de receitas (não acessível)'>
+  <div class='flex min-h-16 items-center border-b px-5'>
+    <div
+      id='clickable-div'
+      data-href='/pt-br'
+      class='cursor-pointer text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
+    >
+      Blog de Receitas.
+    </div>
+    <LanguageSelector />
+  </div>
+  <div class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
+    <div class='grid gap-4'>
+      <span class='text-4xl font-bold'>Deliciosos Cookies com Gotas de Chocolate</span>
+      <Image src={cookie} alt='' class='rounded-lg shadow-lg' loading='eager' />
+      <InaccessibleStarRating legend='Avalie esta receita' client:load />
+    </div>
+    <div class='grid gap-4'>
+      <span class='text-3xl font-bold'>Ingredientes</span>
+      <div class='grid gap-2 text-pretty'>
+        <span class='list-item list-inside'>2 1/4 xícaras (280g) de farinha de trigo</span>
+        <span class='list-item list-inside'>1 colher de chá de bicarbonato de sódio</span>
+        <span class='list-item list-inside'>1 colher de chá de sal</span>
+        <span class='list-item list-inside'>1 xícara (230g) de manteiga sem sal, amolecida</span>
+        <span class='list-item list-inside'>3/4 xícara (150g) de açúcar granulado</span>
+        <span class='list-item list-inside'>3/4 xícara (165g) de açúcar mascavo</span>
+        <span class='list-item list-inside'>2 ovos grandes</span>
+        <span class='list-item list-inside'>2 colheres de chá de extrato de baunilha</span>
+        <span class='list-item list-inside'>
+          2 xícaras (340g) de gotas de chocolate meio amargo
+        </span>
+      </div>
+    </div>
+    <div class='grid gap-4'>
+      <span class='text-3xl font-bold'>Instructions</span>
+      <div class='grid gap-2 text-pretty'>
+        <span class='list-item list-inside list-decimal'>
+          Pré-aqueça o forno a 190°C. Forre as assadeiras com papel manteiga.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Em uma tigela, misture a farinha, o bicarbonato e o sal.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Em uma tigela grande, bata a manteiga, o açúcar granulado e o açúcar mascavo até ficar
+          leve e fofo.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Adicione os ovos, um de cada vez, batendo bem, depois misture a baunilha.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Gradualmente, incorpore os ingredientes secos até que estejam bem misturados.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Adicione as gotas de chocolate e misture.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Coloque colheradas arredondadas da massa nas assadeiras preparadas.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Asse por 9 a 11 minutos ou até dourar.
+        </span>
+        <span class='list-item list-inside list-decimal'>
+          Deixe esfriar nas assadeiras por 5 minutos antes de transferir para uma grade.
+        </span>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const clickableDiv = document.getElementById('clickable-div')
+    if (clickableDiv) {
+      clickableDiv.addEventListener('click', () => {
+        const href = clickableDiv.getAttribute('data-href')
+        if (href) {
+          window.location.href = href
+        }
+      })
+    }
+  })
+</script>

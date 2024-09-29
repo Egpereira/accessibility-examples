@@ -2,14 +2,17 @@
 import { defineConfig } from 'astro/config'
 
 import icon from 'astro-icon'
+import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind'
 
-import react from '@astrojs/react';
-
 export default defineConfig({
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en', 'pt-br']
+  },
   integrations: [
     icon(),
-    tailwind({ applyBaseStyles: false }),
-    react()
+    react(),
+    tailwind({ applyBaseStyles: false })
   ]
 })

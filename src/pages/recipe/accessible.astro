@@ -5,9 +5,10 @@ import Layout from '@layouts/Layout.astro'
 import cookie from '@assets/cookie.webp'
 
 import { StarRating } from '@components/star-rating'
+import LanguageSelector from '@components/language-selector.astro'
 ---
 
-<Layout title='Recipe Blog Example (Accessible)'>
+<Layout title='Recipe blog example (accessible)'>
   <header class='flex min-h-16 items-center border-b px-5'>
     <a
       href='/'
@@ -15,6 +16,7 @@ import { StarRating } from '@components/star-rating'
     >
       Recipe Blog
     </a>
+    <LanguageSelector />
   </header>
   <main aria-labelledby='title' class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
     <div class='grid gap-4'>

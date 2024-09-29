@@ -8,36 +8,37 @@ import LanguageSelector from '@components/language-selector.astro'
     <div class='mx-auto grid w-11/12 max-w-4xl gap-10'>
       <h1 class='text-6xl font-bold text-indigo-800 dark:text-indigo-300'>Links</h1>
       <p class='text-2xl'>
-        Links are an important part of any website. They allow users to navigate to other pages or
-        resources. The following examples demonstrate the difference from a properly built link and
-        non-accessible alternatives and how they affect the user experience.
+        Os links são uma parte importante de qualquer site. Eles permitem que os usuários naveguem
+        para outras páginas ou recursos. Os exemplos a seguir demonstram a diferença entre um link
+        criado corretamente e alternativas não acessíveis e como elas afetam a experiência do
+        usuário.
       </p>
       <LanguageSelector />
       <section
         aria-labelledby='click'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='click' class='text-3xl font-bold'>Span with on click event</h2>
+        <h2 id='click' class='text-3xl font-bold'>Span com evento de clique</h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
           >
-            Behavior
+            Comportamento
           </summary>
           <div class='px-4'>
             <ul class='list-inside list-disc'>
-              <li>Needs JavaScript to work</li>
-              <li>Clickable with a mouse, finger or pointer device</li>
+              <li>Precisa de JavaScript para funcionar</li>
+              <li>Clicável com um mouse, dedo ou dispositivo de apontamento</li>
             </ul>
           </div>
         </details>
         <div>
-          Example:
+          Exemplo:
           <span
-            data-href='/'
+            data-href='/pt-br/'
             class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 hover:decoration-indigo-800 hover:decoration-4 dark:decoration-indigo-400 dark:hover:decoration-indigo-200'
           >
-            Home Page
+            Página Inicial
           </span>
         </div>
       </section>
@@ -45,29 +46,29 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='click-index'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='click-index' class='text-3xl font-bold'>Span with on click event and tab index</h2>
+        <h2 id='click-index' class='text-3xl font-bold'>Span com evento de clique e tab index</h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
           >
-            Behavior
+            Comportamento
           </summary>
           <div class='px-4'>
             <ul class='list-inside list-disc'>
-              <li>Needs JavaScript to work</li>
-              <li>Clickable with a mouse, finger or pointer device</li>
-              <li>Has a visible focus indicator</li>
+              <li>Precisa de JavaScript para funcionar</li>
+              <li>Clicável com um mouse, dedo ou dispositivo de apontamento</li>
+              <li>Possui um indicador de foco visível</li>
             </ul>
           </div>
         </details>
         <div>
-          Example:
+          Exemplo:
           <span
             tabindex='0'
-            data-href='/'
+            data-href='/pt-br/'
             class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
           >
-            Home Page
+            Página Inicial
           </span>
         </div>
       </section>
@@ -76,34 +77,35 @@ import LanguageSelector from '@components/language-selector.astro'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
         <h2 id='click-index-keyboard' class='text-3xl font-bold'>
-          Span with on click event, tab index and keyboard click handler
+          Span com evento de clique, tab index e handler de clique do teclado
         </h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
           >
-            Behavior
+            Comportamento
           </summary>
           <div class='px-4'>
             <ul class='list-inside list-disc'>
-              <li>Needs JavaScript to work</li>
-              <li>Clickable with a mouse, finger or pointer device</li>
-              <li>Has a visible focus indicator</li>
+              <li>Precisa de JavaScript para funcionar</li>
+              <li>Clicável com um mouse, dedo ou dispositivo de apontamento</li>
+              <li>Possui um indicador de foco visível</li>
               <li>
-                Can be activated using the <kbd>Enter</kbd> key, but requires a manual keyboard handler
+                Pode ser ativado usando a tecla <kbd>Enter</kbd>, mas requer um handler de clique do
+                teclado manual
               </li>
             </ul>
           </div>
         </details>
         <div>
-          Example:
+          Exemplo:
           <span
             tabindex='0'
-            data-href='/'
+            data-href='/pt-br/'
             data-enable-keyboard-handler='true'
             class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
           >
-            Home Page
+            Página Inicial
           </span>
         </div>
       </section>
@@ -112,36 +114,38 @@ import LanguageSelector from '@components/language-selector.astro'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
         <h2 id='click-index-keyboard-role' class='text-3xl font-bold'>
-          Span with on click event, tab index, keyboard click handler and "link" role
+          Span com evento de clique, tab index, handler de clique do teclado e função (role) de
+          "link"
         </h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
           >
-            Behavior
+            Comportamento
           </summary>
           <div class='px-4'>
             <ul class='list-inside list-disc'>
-              <li>Needs JavaScript to work</li>
-              <li>Clickable with a mouse, finger or pointer device</li>
-              <li>Has a visible focus indicator</li>
+              <li>Precisa de JavaScript para funcionar</li>
+              <li>Clicável com um mouse, dedo ou dispositivo de apontamento</li>
+              <li>Possui um indicador de foco visível</li>
               <li>
-                Can be activated using the <kbd>Enter</kbd> key, but requires a manual keyboard handler
+                Pode ser ativado usando a tecla <kbd>Enter</kbd>, mas requer um handler de clique do
+                teclado manual
               </li>
-              <li>Is identified as a link by screen readers</li>
+              <li>É identificado como um link por leitores de tela</li>
             </ul>
           </div>
         </details>
         <div>
-          Example:
+          Exemplo:
           <span
             role='link'
             tabindex='0'
-            data-href='/'
+            data-href='/pt-br/'
             data-enable-keyboard-handler='true'
             class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
           >
-            Home Page
+            Página Inicial
           </span>
         </div>
       </section>
@@ -149,34 +153,34 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='button-index'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='button-index' class='text-3xl font-bold'>Button with "link" role</h2>
+        <h2 id='button-index' class='text-3xl font-bold'>Botão com função (role) de "link"</h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
           >
-            Behavior
+            Comportamento
           </summary>
           <div class='px-4'>
             <ul class='list-inside list-disc'>
-              <li>Needs JavaScript to work</li>
-              <li>Clickable with a mouse, finger or pointer device</li>
-              <li>Has a visible focus indicator by default</li>
+              <li>Precisa de JavaScript para funcionar</li>
+              <li>Clicável com um mouse, dedo ou dispositivo de apontamento</li>
+              <li>Possui um indicador de foco visível por padrão</li>
               <li>
-                Can be activated using the <kbd>Enter</kbd> or <kbd>Space</kbd> (not default for links)
-                keys without a manual keyboard handler
+                Pode ser ativado usando as teclas <kbd>Enter</kbd> ou <kbd>Espaço</kbd> (não padrão para
+                links) sem um handler de clique do teclado manual
               </li>
-              <li>Is identified as a link by screen readers</li>
+              <li>É identificado como um link por leitores de tela</li>
             </ul>
           </div>
         </details>
         <div>
-          Example:
+          Exemplo:
           <button
             role='link'
-            data-href='/'
+            data-href='/pt-br/'
             class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
           >
-            Home Page
+            Página Inicial
           </button>
         </div>
       </section>
@@ -184,38 +188,38 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='proper-link'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='proper-link' class='text-3xl font-bold'>Proper link</h2>
+        <h2 id='proper-link' class='text-3xl font-bold'>Link correto</h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
           >
-            Behavior
+            Comportamento
           </summary>
           <div class='px-4'>
             <ul class='list-inside list-disc'>
-              <li>Does not need JavaScript to work</li>
-              <li>Clickable with a mouse, finger or pointer device</li>
-              <li>Has a visible focus indicator by default</li>
+              <li>Não precisa de JavaScript para funcionar</li>
+              <li>Clicável com um mouse, dedo ou dispositivo de apontamento</li>
+              <li>Possui um indicador de foco visível por padrão</li>
               <li>
-                Can be activated using the <kbd>Enter</kbd> key without the need for a manual keyboard
-                handler
+                Pode ser ativado usando a tecla <kbd>Enter</kbd> sem a necessidade de um handler de clique
+                do teclado manual
               </li>
-              <li>Is identified as a link by screen readers</li>
-              <li>Enables certain browsers to display the target URL</li>
+              <li>É identificado como um link por leitores de tela</li>
+              <li>Permite que determinados navegadores exibam o URL de destino</li>
               <li>
-                Enables the contextual menu on right click with features like opening in a new
-                window or tab
+                Ativa o menu contextual ao clicar com o botão direito do mouse com recursos como
+                abrir em uma nova janela ou guia
               </li>
             </ul>
           </div>
         </details>
         <div>
-          Example:
+          Exemplo:
           <a
-            href='/'
+            href='/pt-br/'
             class='fake-link cursor-pointer underline decoration-indigo-600 underline-offset-2 outline-offset-4 hover:decoration-indigo-800 hover:decoration-4 focus-visible:outline-black dark:decoration-indigo-400 dark:hover:decoration-indigo-200 dark:focus-visible:outline-white'
           >
-            Home Page
+            Página Inicial
           </a>
         </div>
       </section>

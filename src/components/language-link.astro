@@ -1,0 +1,23 @@
+---
+type Props = {
+  href: string
+  abbreviation: string
+  description: string
+  isCurrent: boolean
+}
+
+const { href, abbreviation, description, isCurrent } = Astro.props
+
+const Wrapper = isCurrent ? 'span' : 'a'
+const props = isCurrent ? {} : { href }
+---
+
+<Wrapper
+  {...props}
+  class={isCurrent
+    ? ''
+    : 'underline text-indigo-600 dark:text-indigo-400 underline-offset-2 outline-offset-4 hover:text-indigo-800  focus-visible:outline-black  dark:hover:text-indigo-200 dark:focus-visible:outline-white'}
+>
+  <span aria-hidden='true' class='uppercase'>{abbreviation}</span>
+  <span class='sr-only'>{description}</span>
+</Wrapper>
