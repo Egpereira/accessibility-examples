@@ -4,10 +4,10 @@ import LanguageSelector from '@components/language-selector.astro'
 ---
 
 <Layout title='Links'>
-  <main class='py-16 text-xl'>
+  <main class='py-16 text-base sm:text-lg'>
     <div class='mx-auto grid w-11/12 max-w-4xl gap-10'>
-      <h1 class='text-6xl font-bold text-indigo-800 dark:text-indigo-300'>Links</h1>
-      <p class='text-2xl'>
+      <h1 class='text-5xl font-bold text-indigo-800 sm:text-6xl dark:text-indigo-300'>Links</h1>
+      <p class='text-xl sm:text-2xl'>
         Links are an important part of any website. They allow users to navigate to other pages or
         resources. The following examples demonstrate the difference from a properly built link and
         non-accessible alternatives and how they affect the user experience.
@@ -17,7 +17,7 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='click'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='click' class='text-3xl font-bold'>Span with on click event</h2>
+        <h2 id='click' class='text-2xl font-bold sm:text-3xl'>Span with on click event</h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
@@ -45,7 +45,9 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='click-index'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='click-index' class='text-3xl font-bold'>Span with on click event and tab index</h2>
+        <h2 id='click-index' class='text-2xl font-bold sm:text-3xl'>
+          Span with on click event and tab index
+        </h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
@@ -75,7 +77,7 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='click-index-keyboard'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='click-index-keyboard' class='text-3xl font-bold'>
+        <h2 id='click-index-keyboard' class='text-2xl font-bold sm:text-3xl'>
           Span with on click event, tab index and keyboard click handler
         </h2>
         <details>
@@ -111,7 +113,7 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='click-index-keyboard-role'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='click-index-keyboard-role' class='text-3xl font-bold'>
+        <h2 id='click-index-keyboard-role' class='text-2xl font-bold sm:text-3xl'>
           Span with on click event, tab index, keyboard click handler and "link" role
         </h2>
         <details>
@@ -149,7 +151,7 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='button-index'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='button-index' class='text-3xl font-bold'>Button with "link" role</h2>
+        <h2 id='button-index' class='text-2xl font-bold sm:text-3xl'>Button with "link" role</h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'
@@ -184,7 +186,7 @@ import LanguageSelector from '@components/language-selector.astro'
         aria-labelledby='proper-link'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'
       >
-        <h2 id='proper-link' class='text-3xl font-bold'>Proper link</h2>
+        <h2 id='proper-link' class='text-2xl font-bold sm:text-3xl'>Proper link</h2>
         <details>
           <summary
             class='cursor-pointer outline-offset-4 marker:text-indigo-600 focus-visible:outline-black dark:marker:text-indigo-400 dark:focus-visible:outline-white'

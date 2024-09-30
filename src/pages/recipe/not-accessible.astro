@@ -12,19 +12,19 @@ import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
     <div
       id='clickable-div'
       data-href='/'
-      class='cursor-pointer text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
+      class='cursor-pointer text-xl font-bold outline-2 outline-offset-4 outline-black sm:text-2xl dark:outline-white'
     >
       Recipe Blog.
     </div>
   </div>
-  <div class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
+  <div class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-base sm:text-lg'>
     <div class='grid gap-4'>
-      <span class='text-4xl font-bold'>Delicious Chocolate Chip Cookies</span>
+      <span class='text-3xl font-bold sm:text-4xl'>Delicious Chocolate Chip Cookies</span>
       <Image src={cookie} alt='' class='rounded-lg shadow-lg' loading='eager' />
       <InaccessibleStarRating legend='Rate this recipe' client:load />
     </div>
     <div class='grid gap-4'>
-      <span class='text-3xl font-bold'>Ingredients</span>
+      <span class='text-2xl font-bold sm:text-3xl'>Ingredients</span>
       <div class='grid gap-2 text-pretty'>
         <span class='list-item list-inside'>2 1/4 cups (280g) all-purpose flour</span>
         <span class='list-item list-inside'>1 tsp baking soda</span>
@@ -38,7 +38,7 @@ import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
       </div>
     </div>
     <div class='grid gap-4'>
-      <span class='text-3xl font-bold'>Instructions</span>
+      <span class='text-2xl font-bold sm:text-3xl'>Instructions</span>
       <div class='grid gap-2 text-pretty'>
         <span class='list-item list-inside list-decimal'>
           Preheat the oven to 375°F (190°C). Line baking sheets with parchment paper.

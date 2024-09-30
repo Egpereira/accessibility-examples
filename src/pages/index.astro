@@ -6,13 +6,18 @@ import LanguageSelector from '@components/language-selector.astro'
 <Layout title='Accessibility Examples'>
   <main aria-labelledby='title' class='py-16'>
     <div class='mx-auto grid w-11/12 max-w-4xl place-items-center gap-10 text-center'>
-      <h1 id='title' class='text-6xl font-bold text-indigo-800 dark:text-indigo-300'>
+      <h1
+        id='title'
+        class='hyphens-auto text-5xl font-bold text-indigo-800 sm:text-6xl dark:text-indigo-300'
+      >
         Accessibility Examples
       </h1>
-      <p class='text-2xl'>A list of accessibility examples for learning and testing purposes.</p>
+      <p class='text-xl sm:text-2xl'>
+        A list of accessibility examples for learning and testing purposes.
+      </p>
       <LanguageSelector />
       <ul
-        class='list grid grid-cols-1 justify-items-start gap-2 text-lg marker:text-indigo-600 md:grid-cols-2'
+        class='list grid grid-cols-1 justify-items-start gap-2 text-base marker:text-indigo-600 sm:text-lg md:grid-cols-2'
       >
         <li class='w-full text-left'>
           <a

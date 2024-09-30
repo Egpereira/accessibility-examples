@@ -12,15 +12,18 @@ import LanguageSelector from '@components/language-selector.astro'
   <header class='flex min-h-16 items-center border-b px-5'>
     <a
       href='/'
-      class='text-2xl font-bold outline-2 outline-offset-4 outline-black dark:outline-white'
+      class='text-xl font-bold outline-2 outline-offset-4 outline-black sm:text-2xl dark:outline-white'
     >
       Recipe Blog
     </a>
     <LanguageSelector />
   </header>
-  <main aria-labelledby='title' class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-lg'>
+  <main
+    aria-labelledby='title'
+    class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-base sm:text-lg'
+  >
     <div class='grid gap-4'>
-      <h1 id='title' class='text-4xl font-bold'>Delicious Chocolate Chip Cookies</h1>
+      <h1 id='title' class='text-3xl font-bold sm:text-4xl'>Delicious Chocolate Chip Cookies</h1>
       <Image
         src={cookie}
         alt=`Freshly baked chocolate chip cookies cooling on a wire rack. In the foreground, there's a close-up of a cookie that has been broken in half, revealing its soft and chewy interior filled with melted chocolate chips. The cookies have a golden-brown color and are studded with dark chocolate chips throughout. Several other whole cookies can be seen in the background, all resting on the silver wire cooling rack. The cookies appear to be homemade and look deliciously tempting.`
@@ -30,7 +33,7 @@ import LanguageSelector from '@components/language-selector.astro'
       <StarRating legend='Rate this recipe' client:load />
     </div>
     <section aria-labelledby='ingredients' class='grid gap-4'>
-      <h2 id='ingredients' class='text-3xl font-bold'>Ingredients</h2>
+      <h2 id='ingredients' class='text-2xl font-bold sm:text-3xl'>Ingredients</h2>
       <ul aria-labelledby='ingredients' class='grid list-inside list-disc gap-2'>
         <li>2 1/4 cups (280g) all-purpose flour</li>
         <li>1 tsp baking soda</li>
@@ -44,7 +47,7 @@ import LanguageSelector from '@components/language-selector.astro'
       </ul>
     </section>
     <section aria-labelledby='instructions' class='grid gap-4'>
-      <h2 id='instructions' class='text-3xl font-bold'>Instructions</h2>
+      <h2 id='instructions' class='text-2xl font-bold sm:text-3xl'>Instructions</h2>
       <ol aria-labelledby='instructions' class='grid list-inside list-decimal gap-2'>
         <li>Preheat the oven to 375°F (190°C). Line baking sheets with parchment paper.</li>
         <li>In a bowl, whisk together flour, baking soda, and salt.</li>
