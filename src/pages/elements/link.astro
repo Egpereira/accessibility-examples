@@ -1,9 +1,11 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import LanguageSelector from '@components/language-selector.astro'
 ---
 
-<Layout title='Links'>
+<Layout
+  title='Links'
+  description='Examples of different methods to simulate a link and how they affect the experience of different users.'
+>
   <main class='py-16 text-base sm:text-lg'>
     <div class='mx-auto grid w-11/12 max-w-4xl gap-10'>
       <h1 class='text-5xl font-bold text-indigo-800 sm:text-6xl dark:text-indigo-300'>Links</h1>
@@ -12,7 +14,6 @@ import LanguageSelector from '@components/language-selector.astro'
         resources. The following examples demonstrate the difference from a properly built link and
         non-accessible alternatives and how they affect the user experience.
       </p>
-      <LanguageSelector />
       <section
         aria-labelledby='click'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'

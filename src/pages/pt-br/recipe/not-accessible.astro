@@ -5,10 +5,13 @@ import Layout from '@layouts/Layout.astro'
 import cookie from '@assets/cookie.webp'
 
 import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
-import LanguageSelector from '@components/language-selector.astro'
 ---
 
-<Layout title='Exemplo de blog de receitas (não acessível)' lang='pt-br'>
+<Layout
+  lang='pt-br'
+  title='Exemplo de blog de receitas (não acessível)'
+  description='Uma página de exemplo destinada a demonstrar práticas não recomendadas em termos de acessibilidade.'
+>
   <div class='flex min-h-16 items-center border-b px-5'>
     <div
       id='clickable-div'
@@ -17,7 +20,6 @@ import LanguageSelector from '@components/language-selector.astro'
     >
       Blog de Receitas.
     </div>
-    <LanguageSelector />
   </div>
   <div class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-base sm:text-lg'>
     <div class='grid gap-4'>

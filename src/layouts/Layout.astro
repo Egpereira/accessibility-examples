@@ -1,29 +1,29 @@
 ---
 import '../styles/reset.css'
+import LanguageSelector from '@components/language-selector.astro'
 
 type Props = {
-  title: string
   lang?: string
+  title: string
+  description: string
   class?: string
 }
 
-const { title, lang = 'en', class: className } = Astro.props
+const { lang = 'en', title, description, class: className } = Astro.props
 ---
 
 <!doctype html>
 <html lang={lang}>
   <head>
     <meta charset='UTF-8' />
-    <meta
-      name='description'
-      content='A list of accessible examples for learning and testing purposes.'
-    />
+    <meta name='description' content={description} />
     <meta name='viewport' content='width=device-width' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
   <body class={className}>
+    <LanguageSelector />
     <slot />
   </body>
 </html>

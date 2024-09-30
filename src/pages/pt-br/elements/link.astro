@@ -1,9 +1,12 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import LanguageSelector from '@components/language-selector.astro'
 ---
 
-<Layout title='Links' lang='pt-br'>
+<Layout
+  lang='pt-br'
+  title='Links'
+  description='Exemplos de diferentes métodos para simular um link e como eles afetam a experiência de diferentes usuários.'
+>
   <main class='py-16 text-base sm:text-xl'>
     <div class='mx-auto grid w-11/12 max-w-4xl gap-10'>
       <h1 class='text-5xl font-bold text-indigo-800 sm:text-6xl dark:text-indigo-300'>Links</h1>
@@ -13,7 +16,6 @@ import LanguageSelector from '@components/language-selector.astro'
         criado corretamente e alternativas não acessíveis e como elas afetam a experiência do
         usuário.
       </p>
-      <LanguageSelector />
       <section
         aria-labelledby='click'
         class='grid w-full place-items-start gap-4 rounded-lg border-2 border-gray-300 px-4 py-6 dark:border-gray-600'

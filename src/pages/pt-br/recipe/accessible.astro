@@ -5,10 +5,13 @@ import Layout from '@layouts/Layout.astro'
 import cookie from '@assets/cookie.webp'
 
 import { StarRating } from '@components/star-rating'
-import LanguageSelector from '@components/language-selector.astro'
 ---
 
-<Layout title='Exemplo de blog de receitas (acessível)' lang='pt-br'>
+<Layout
+  lang='pt-br'
+  title='Exemplo de blog de receitas (acessível)'
+  description='Uma página de exemplo destinada a demonstrar práticas recomendadas de acessibilidade.'
+>
   <header class='flex min-h-16 items-center border-b px-5'>
     <a
       href='/pt-br'
@@ -16,7 +19,6 @@ import LanguageSelector from '@components/language-selector.astro'
     >
       Blog de Receitas
     </a>
-    <LanguageSelector />
   </header>
   <main
     aria-labelledby='title'

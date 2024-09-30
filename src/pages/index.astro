@@ -1,9 +1,11 @@
 ---
 import Layout from '@layouts/Layout.astro'
-import LanguageSelector from '@components/language-selector.astro'
 ---
 
-<Layout title='Accessibility Examples'>
+<Layout
+  title='Accessibility Examples'
+  description='A list of accessibility examples for learning and testing purposes.'
+>
   <main aria-labelledby='title' class='py-16'>
     <div class='mx-auto grid w-11/12 max-w-4xl place-items-center gap-10 text-center'>
       <h1
@@ -15,7 +17,6 @@ import LanguageSelector from '@components/language-selector.astro'
       <p class='text-xl sm:text-2xl'>
         A list of accessibility examples for learning and testing purposes.
       </p>
-      <LanguageSelector />
       <ul
         class='list grid grid-cols-1 justify-items-start gap-2 text-base marker:text-indigo-600 sm:text-lg md:grid-cols-2'
       >
