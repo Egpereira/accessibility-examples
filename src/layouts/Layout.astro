@@ -6,10 +6,9 @@ type Props = {
   lang?: string
   title: string
   description: string
-  class?: string
 }
 
-const { lang = 'en', title, description, class: className } = Astro.props
+const { lang = 'en', title, description } = Astro.props
 ---
 
 <!doctype html>
@@ -22,7 +21,7 @@ const { lang = 'en', title, description, class: className } = Astro.props
     <meta name='generator' content={Astro.generator} />
     <title>{title}</title>
   </head>
-  <body class={className}>
+  <body class='bg-gray-50 dark:bg-gray-950'>
     <LanguageSelector />
     <slot />
   </body>
