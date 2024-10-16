@@ -2,14 +2,14 @@
 import { Image } from 'astro:assets'
 
 import Layout from '@layouts/Layout.astro'
-import cookie from '@assets/cookie.webp'
+import cookies from '@assets/cookies.jpg'
 
 import { StarRating } from '@components/star-rating'
 ---
 
 <Layout
   lang='pt-br'
-  title='Exemplo de blog de receitas (acessível)'
+  title='Exemplo de blog de receitas'
   description='Uma página de exemplo destinada a demonstrar práticas recomendadas de acessibilidade.'
 >
   <header class='flex min-h-16 items-center border-b px-5'>
@@ -29,8 +29,9 @@ import { StarRating } from '@components/star-rating'
         Deliciosos Cookies com Gotas de Chocolate
       </h1>
       <Image
-        src={cookie}
-        alt=`Cookies de gotas de chocolate recém-assados esfriando em uma grade. Em primeiro plano, há um close-up de um cookie que foi partido ao meio, revelando seu interior macio, cheio de gotas de chocolate derretidas. Os cookies têm uma cor marrom dourada e estão repletos de gotas de chocolate escuro por toda parte. Vários outros cookies inteiros podem ser vistos ao fundo, todos descansando na grade de resfriamento prateada. Os cookies parecem ser caseiros e têm uma aparência deliciosamente tentadora.`
+        src={cookies}
+        width={728}
+        alt=`Cookies com gotas de chocolate recém-assados em uma grade de resfriamento. No centro, um cookie quebrado revela um interior de chocolate derretido e cremoso. Vários cookies inteiros o cercam, exibindo bordas marrom-douradas e lascas de chocolate espalhadas.`
         class='rounded-lg shadow-lg'
         loading='eager'
       />

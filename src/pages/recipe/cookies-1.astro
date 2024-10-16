@@ -2,13 +2,13 @@
 import { Image } from 'astro:assets'
 
 import Layout from '@layouts/Layout.astro'
-import cookie from '@assets/cookie.webp'
+import cookies from '@assets/cookies.jpg'
 
 import { StarRating } from '@components/star-rating'
 ---
 
 <Layout
-  title='Recipe blog example (accessible)'
+  title='Recipe blog example'
   description='An example page designed to demonstrate recommended accessibility practices.'
 >
   <header class='flex min-h-16 items-center border-b px-5'>
@@ -26,8 +26,9 @@ import { StarRating } from '@components/star-rating'
     <div class='grid gap-4'>
       <h1 id='title' class='text-3xl font-bold sm:text-4xl'>Delicious Chocolate Chip Cookies</h1>
       <Image
-        src={cookie}
-        alt=`Freshly baked chocolate chip cookies cooling on a wire rack. In the foreground, there's a close-up of a cookie that has been broken in half, revealing its soft and chewy interior filled with melted chocolate chips. The cookies have a golden-brown color and are studded with dark chocolate chips throughout. Several other whole cookies can be seen in the background, all resting on the silver wire cooling rack. The cookies appear to be homemade and look deliciously tempting.`
+        src={cookies}
+        width={728}
+        alt=`Freshly baked chocolate chip cookies on a wire cooling rack. In the center, a broken cookie reveals a gooey, melted chocolate interior. Several whole cookies surround it, showcasing golden-brown edges and chocolate chips scattered throughout.`
         class='rounded-lg shadow-lg'
         loading='eager'
       />

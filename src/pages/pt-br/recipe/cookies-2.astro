@@ -2,14 +2,14 @@
 import { Image } from 'astro:assets'
 
 import Layout from '@layouts/Layout.astro'
-import cookie from '@assets/cookie.webp'
+import cookies from '@assets/cookies.jpg'
 
 import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
 ---
 
 <Layout
   lang='pt-br'
-  title='Exemplo de blog de receitas (não acessível)'
+  title='Exemplo de blog de receitas'
   description='Uma página de exemplo destinada a demonstrar práticas não recomendadas em termos de acessibilidade.'
 >
   <div class='flex min-h-16 items-center border-b px-5'>
@@ -18,13 +18,13 @@ import { InaccessibleStarRating } from '@components/inaccessible-star-rating'
       data-href='/pt-br'
       class='cursor-pointer text-xl font-bold outline-2 outline-offset-4 outline-black sm:text-2xl dark:outline-white'
     >
-      Blog de Receitas.
+      Blog de Receitas
     </div>
   </div>
   <div class='bg mx-auto grid max-w-3xl gap-8 px-5 py-8 text-base sm:text-lg'>
     <div class='grid gap-4'>
       <span class='text-3xl font-bold sm:text-4xl'>Deliciosos Cookies com Gotas de Chocolate</span>
-      <Image src={cookie} alt='imagem' class='rounded-lg shadow-lg' loading='eager' />
+      <Image src={cookies} width={728} alt='imagem' class='rounded-lg shadow-lg' loading='eager' />
       <InaccessibleStarRating legend='Avalie esta receita' client:load />
     </div>
     <div class='grid gap-4'>
